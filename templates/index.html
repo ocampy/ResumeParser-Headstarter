@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Resume Parser</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Resume Parser</h1>
+        <form method="post" action="/" enctype="multipart/form-data">
+            <label for="resume">Upload Resume:</label>
+            <input type="file" id="resume" name="resume" required>
+            <br>
+            <label for="keywords">Keywords:</label>
+            <input type="text" id="keywords" name="keywords" placeholder="Enter keywords">
+            <br>
+            <button type="submit">Parse</button>
+        </form>
+    </div>
+</body>
+
+</html>

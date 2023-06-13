@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Uploaded Resumes</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Uploaded Resumes</h1>
+        <div class="resumes-list">
+            {% for resume in resumes %}
+            <div class="resume-item">
+                <h3>{{ resume.name }}</h3>
+                <p>Keywords: {{ resume.keywords }}</p>
+                <a href="{{ url_for('download_resume', filename=resume.name) }}">Download</a>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</body>
+
+</html>

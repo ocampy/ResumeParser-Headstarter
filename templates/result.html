@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Resume Parser - Result</title>
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+  <meta http-equiv="refresh" content="5;url=/resumes">
+</head>
+<body>
+  <h1>Resume Parser - Result</h1>
+  
+  <div class="result">
+    <p>Name: {{ name }}</p>
+    
+    <div class="keyword-results">
+      <p>Keyword Search Results:</p>
+      {% if keyword_results %}
+        <ul>
+          {% for result in keyword_results %}
+            <li>{{ result }}</li>
+          {% endfor %}
+        </ul>
+      {% else %}
+        <p>No keyword matches found.</p>
+      {% endif %}
+    </div>
+    
+    <!-- Add more parsed information as needed -->
+  </div>
+  
+  <p>Redirecting to the uploaded resumes page in 5 seconds...</p>
+</body>
+</html>
